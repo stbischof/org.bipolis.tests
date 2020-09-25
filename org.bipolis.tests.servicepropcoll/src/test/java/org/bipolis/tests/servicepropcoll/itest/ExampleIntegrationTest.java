@@ -13,9 +13,10 @@ import java.util.List;
 
 import org.bipolis.tests.servicepropcoll.Condition;
 import org.bipolis.tests.servicepropcoll.Example;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
@@ -31,14 +32,24 @@ public class ExampleIntegrationTest
     @InjectBundleContext
     BundleContext context = null;
 
-    @BeforeAll
-    public static void before()
+    @BeforeEach
+    public void before(TestInfo testInfo)
     {
+        System.out.println("|||||||||||||||||||||||||||||||||||");
+        System.out.println("|||||          START         ||||||");
+        System.out.println(
+            "||||| " + testInfo.getTestMethod().get().getName() + " ||||||");
+        System.out.println("|||||||||||||||||||||||||||||||||||");
     }
 
-    @AfterAll
-    public static void after()
+    @AfterEach
+    public void after(TestInfo testInfo)
     {
+        System.out.println("|||||||||||||||||||||||||||||||||||");
+        System.out.println("|||||          STOP         ||||||");
+        System.out.println(
+            "||||| " + testInfo.getTestMethod().get().getName() + " ||||||");
+        System.out.println("|||||||||||||||||||||||||||||||||||");
     }
 
     /**
@@ -205,6 +216,7 @@ public class ExampleIntegrationTest
     @Test
     public void testExampleNotWorking2() throws InterruptedException
     {
+
         List<String> propList = new LinkedList<>();
 
         Dictionary<String, Object> properties = getProperties(
