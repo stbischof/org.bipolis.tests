@@ -115,7 +115,7 @@
             <dependency>
                 <groupId>org.eclipse.platform</groupId>
                 <artifactId>org.eclipse.equinox.metatype</artifactId>
-                <version>1.5.0</version>
+                <version>1.5.300</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
