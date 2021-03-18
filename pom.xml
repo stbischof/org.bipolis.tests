@@ -173,7 +173,7 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>org.apache.felix.http.jetty</artifactId>
                 <classifier>light</classifier>
-                <version>4.0.10</version>
+                <version>4.1.6</version>
                 <scope>runtime</scope>
             </dependency>
             <dependency>
