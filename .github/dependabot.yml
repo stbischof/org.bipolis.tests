@@ -1,0 +1,33 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.mockito:mockito-core
+    versions:
+    - 3.7.7
+    - 3.8.0
+  - dependency-name: org.apache.felix:org.apache.felix.http.jetty:light
+    versions:
+    - 4.1.4
+  - dependency-name: org.apache.felix:org.apache.felix.http.jetty
+    versions:
+    - 4.1.4
+  - dependency-name: org.apache.servicemix.bundles:org.apache.servicemix.bundles.junit
+    versions:
+    - 4.13.1_1
+  - dependency-name: org.apache.felix:org.apache.felix.configurator
+    versions:
+    - 1.0.12
+  - dependency-name: org.apache.felix:org.apache.felix.scr
+    versions:
+    - 2.1.24
+  - dependency-name: org.eclipse.platform:org.eclipse.equinox.metatype
+    versions:
+    - 1.5.300
+  - dependency-name: org.eclipse.platform:org.eclipse.equinox.event
+    versions:
+    - 1.5.500
